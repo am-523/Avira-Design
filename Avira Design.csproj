@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3751EFF4-4892-4503-9DA0-EAEA54BBA114}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Avira_Design</RootNamespace>
+    <AssemblyName>Avira Design</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.0.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="performance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="performance.Designer.cs">
+      <DependentUpon>performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="privacy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="privacy.Designer.cs">
+      <DependentUpon>privacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="security.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="security.Designer.cs">
+      <DependentUpon>security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Status.Designer.cs">
+      <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="performance.resx">
+      <DependentUpon>performance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="privacy.resx">
+      <DependentUpon>privacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="security.resx">
+      <DependentUpon>security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Status.resx">
+      <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avira_Antivirus_Logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_level_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broom_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_208px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firewall_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\honeycombs_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network_drive_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\performance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privacy.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privacy_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privacy_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protect_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rocket_100px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rocket_100px.png1.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shared_folder_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_left_rotation_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\virus_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vpn_8px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launchpad_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privacy_100px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protect_100px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rocket_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_payment_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cookie_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_mark_500px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
